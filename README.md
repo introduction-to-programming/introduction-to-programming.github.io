@@ -1,3 +1,11 @@
+# [Introduction to Programming](https://github.com/introduction-to-programming/introduction-to-programming.github.io)
+
+Practice questions for the Introduction to Programming course.
+
+Preview: [https://introduction-to-programming.github.io/](https://introduction-to-programming.github.io/)
+
+All rights reserved.
+
 # [Minimal Mistakes Template](https://github.com/j3soon/minimal-mistakes-template/)
 
 A minimum Jekyll blog template with some customization based on the [Minimal Mistakes Theme](https://mmistakes.github.io/minimal-mistakes/).
