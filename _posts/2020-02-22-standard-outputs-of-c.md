@@ -1,7 +1,7 @@
 ---
 title: "Standard Outputs of C"
 tags: question c
-last_modified_at: 2020-11-01
+last_modified_at: 2020-11-09
 ---
 
 Review of common inputs: `printf`, `putchar`, `puts`.
@@ -9,6 +9,24 @@ Review of common inputs: `printf`, `putchar`, `puts`.
 Comparing to Standard Inputs, Standard Outputs are much simpler.
 
 <!--more-->
+
+Shortcut for Quick Review:
+- <a id="toggle-all-summary">Toggle all answers (Click to expand/collapse all Answers)</a>
+<script>
+// Reference the toggle link
+var toggle = document.getElementById('toggle-all-summary');
+toggle.addEventListener('click', function(e) {
+  e.target.classList.toggle('toggle-state');
+  var details = document.querySelectorAll('details');
+  Array.from(details).forEach(function(obj, idx) {
+    if (e.target.classList.contains('toggle-state')) {
+      obj.open = true;
+    } else {
+      obj.open = false;
+    }
+  });
+}, false);
+</script>
 
 ## Basic Formats
 

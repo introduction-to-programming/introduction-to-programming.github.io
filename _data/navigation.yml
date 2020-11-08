@@ -8,8 +8,8 @@ nav:
       url: /standard-inputs-of-c/
     - title: "Standard Outputs"
       url: /standard-outputs-of-c/
-    # - title: "Basic Syntaxes"
-    #   url: /basic-syntaxes-of-c/
+    - title: "Basic Syntaxes"
+      url: /basic-syntaxes-of-c/
     # - title: "Basic Recursions"
     #   url: /basic-recursions-with-c/
     # - title: "Binary Representations"
