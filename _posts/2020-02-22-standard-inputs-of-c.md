@@ -31,6 +31,8 @@ toggle.addEventListener('click', function(e) {
 }, false);
 </script>
 
+<span style="color:red">Update (2020.11.25): Fix typo in answer description (Question 5)</span>
+
 ## Basic Formats
 
 1. What is the result of the following code?
@@ -201,7 +203,7 @@ toggle.addEventListener('click', function(e) {
    <!--Answer End-->
    <!--Description Begin-->
    Using `%c` as the input format automatically reads in every character, including whitespace characters.
-   The visualization of variable `a` is: `{'A', ' ', 'B', ' ', '\n', 'C'}`.
+   The visualization of variable `a` is: `{'A', ' ', 'B', '\n', 'C', '\n'}`.
    For each variable, they are stored in its binary format in the memory, regardless of its type. Take `char` as an example, the characters are stored by their ASCII code. It should be straightforward to see that: `'A' + ' ' is 'a'`. (`65 + 32 = 97`)
 
    The `int` cast before printing out the character is used to extend the 1-byte variable to 4-bytes to avoid undefined behavior.
