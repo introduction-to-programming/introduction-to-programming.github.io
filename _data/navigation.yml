@@ -14,5 +14,5 @@ nav:
       url: /basic-recursions-with-c/
     - title: "Binary Representations"
       url: /binary-representations/
-    # - title: "Basic Arrays and Pointers"
-    #   url: /basic-arrays-and-pointers-in-c/
+    - title: "Basic Arrays and Pointers"
+      url: /basic-arrays-and-pointers-in-c/
