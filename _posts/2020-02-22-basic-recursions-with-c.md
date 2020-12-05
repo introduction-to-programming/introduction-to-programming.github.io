@@ -1,7 +1,7 @@
 ---
 title: "Basic Recursions with C"
 tags: question c
-last_modified_at: 2020-11-16
+last_modified_at: 2020-12-05
 ---
 
 Review of basic recursions. This part is more conceptual than the previous sections.
@@ -25,6 +25,8 @@ toggle.addEventListener('click', function(e) {
   });
 }, false);
 </script>
+
+<span style="color:red">Update (2020.12.05): Fix stack size in answer code (Replace Recursion with Loops)</span>
 
 ## Steps for Writing Recursion Code
 
@@ -439,7 +441,7 @@ Modify the code to use loops without recursions.
 
 ```c
 #include <stdio.h>
-#define MAX 3
+#define MAX 10000
 
 typedef struct {
     int n, from, to, temp;
@@ -450,7 +452,7 @@ int top = -1;
 void move_hanoi(int n, int from, int to, int temp);
 
 int main(void) {
-    move_hanoi(MAX, 1, 3, 2);
+    move_hanoi(3, 1, 3, 2);
     return 0;
 }
 

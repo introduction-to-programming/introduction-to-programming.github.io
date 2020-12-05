@@ -1,7 +1,7 @@
 ---
 title: "Basic Array and Pointers in C"
 tags: question c
-last_modified_at: 2020-11-30
+last_modified_at: 2020-12-05
 ---
 
 Review of array and pointers.
@@ -25,6 +25,8 @@ toggle.addEventListener('click', function(e) {
   });
 }, false);
 </script>
+
+<span style="color:red">Update (2020.12.05): Fix typo in description, (`&a` and `&a[0]` have different types, so `&a` is not an alias of `&a[0]`) (More on Pointers and Array)</span>
 
 ## Structure
 
@@ -442,15 +444,17 @@ Operator review:
 
 - `&var` returns `var`'s memory address.
 - `*ptr = c` assign `c` to the address where `ptr` is pointing.
-- `a = *ptr` takes out the value where `ptr` is pointing and store it in `a`.
+- `r = *ptr` takes out the value where `ptr` is pointing and store it in `r`.
 - `ptr++` Move the pointer forward for `sizeof(*ptr)`-byte, that is, to move n-bytes, where n is the size of the type that `ptr` is pointing to.
 
   e.g. `int* ptr`, if `ptr == 0x00`, `ptr+1 == 0x04`, assuming `sizeof(int)` is 4.
-- `&a` is an alias of `&a[0]`.
-- `arr[i]` is an alias of `*(a+i)`.
+- The arithmetic of `a` is the same with `&a[0]`. (However, they have different types, the former is an array, the latter is a pointer)
 
-  So, `i[arr]` is valid! (which is equal to `arr[i]`)
-- `arr[i][j]` is an alias of `*(*(a+i)+j)`.
+  e.g. `int a[100]`, if `a == 0x00`, `&a[0] == 0x00`, `a+1 == 0x04`, `&a[0]+1 == 0x04` , assuming `sizeof(int)` is 4.
+- `a[i]` is an alias of `*(a+i)`.
+
+  So, `i[a]` is valid! (which is equal to `a[i]`)
+- `a[i][j]` is an alias of `*(*(a+i)+j)`.
 - `struct_ptr->var` is an alias of `(*struct_ptr).var`.
 
 1. Size of Pointers and Arrays.
@@ -807,6 +811,7 @@ Operator review:
    <details><summary>Click to expand Answer</summary><div class="notice--success" markdown="1">
    ✔️ **Answer**
    <!--Answer Begin-->
+
    Undefined Behavior.
    <!--Answer End-->
    <!--Description Begin-->
@@ -837,7 +842,7 @@ Operator review:
 
 - Arrays
 
-  For `int a[2][3]`, it can be interpreted from the inside to the outside ([Left-Right Rule](http://cseweb.ucsd.edu/~ricko/rt_lt.rule.html)). So `a` is an array with 2 cells. Each of the cells contains an `int[3]` element, that is, an array with 3 cells storing int.
+  For `int a[2][3]`, it can be interpreted from the inside to the outside. So `a` is an array with 2 cells. Each of the cells contains an `int[3]` element, that is, an array with 3 cells storing int.
 
 - Pointers
 
@@ -847,7 +852,7 @@ Operator review:
 
   For `int (*pa)[3]`, it can also be interpreted from the inside to the outside. So `pa` is a pointer, pointing to an `int[3]` element.
 
-  For `int *ap[3]`, it is an array of 3 cells. Each cell stores an `int*`, that is, a pointer-to-int.
+  For `int *ap[3]`, it is an array of 3 cells. Each cell stores an `int*`, that is, a pointer-to-int. ([Left-Right Rule](http://cseweb.ucsd.edu/~ricko/rt_lt.rule.html))
 
 There are much more tricky problems on pointers and arrays, but by thinking hard on the questions above and understanding the underlying reason for the results should be quite enough.
 
