@@ -1,7 +1,7 @@
 ---
 title: "Binary Representations"
 tags: question c
-last_modified_at: 2020-11-23
+last_modified_at: 2020-12-06
 ---
 
 Review of binary representations.
@@ -25,6 +25,8 @@ toggle.addEventListener('click', function(e) {
   });
 }, false);
 </script>
+
+<span style="color:red">Update (2020.12.06): Fix typo in answer (Any Number Basis to Decimal)</span>
 
 ## Number Basis (Radix)
 
@@ -156,7 +158,7 @@ Some more practices:
    ✔️ **Answer**
    <!--Answer Begin-->
 
-   $107_{19}$
+   $107_{10}$
    <!--Answer End-->
    <!--Description Begin-->
    <!--Description End-->

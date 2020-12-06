@@ -1,7 +1,7 @@
 ---
 title: "Basic Array and Pointers in C"
 tags: question c
-last_modified_at: 2020-12-05
+last_modified_at: 2020-12-06
 ---
 
 Review of array and pointers.
@@ -612,7 +612,7 @@ Operator review:
    <!--Description Begin-->
    Note that `sizeof a` is determined by the compiler [when compiling to assembly](https://stackoverflow.com/q/671790/).
 
-   The `int a[]` is just syntax sugar for `int* a`, they are both pointers (array decayed into pointer).
+   The `int a[]` is just syntactic sugar for `int* a`, they are both pointers (array decayed into pointer).
    <!--Description End-->
    </div></details>
 
@@ -723,7 +723,7 @@ Operator review:
        int *p;
        for (int i = 0; i < 3; i++) {
            p = a + i;
-           printf("%td\n", (char*)(p)-(char*)a);
+           printf("%td\n", (char*)p-(char*)a);
            printf("%td\n", (p-a));
        }
        return 0;
